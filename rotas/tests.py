@@ -1,3 +1,7 @@
-from django.test import TestCase
+from django.test import Client
 
-# Create your tests here.
+
+def test_home_status_code(client: Client):
+    resposta = client.get('/')
+    assert resposta.status_code == 200
+
