@@ -1,3 +1,7 @@
 from django.db import models
 
-# Create your models here.
+
+class Rota(models.Model):
+    source = models.CharField(max_length=255)
+    target = models.CharField(max_length=255)
+    distance = models.IntegerField()
