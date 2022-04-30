@@ -18,18 +18,18 @@ from django.urls import path, include
 
 from rest_framework import routers
 
-from rotas.api import viewsets as rotasviewsets
-from rotas.views import home
+from rotas.views import home, LocalAPIViewSet, RotaAPIViewSet
 
 route = routers.DefaultRouter()
 
-route.register(r'graph', rotasviewsets.RotasViewSet, basename="Rotas")
+route.register('local', LocalAPIViewSet, basename="Locais")
+route.register('rota', RotaAPIViewSet, basename="Rotas")
 
 
 urlpatterns = [
     path('', home),
     path('admin/', admin.site.urls),
     path('api/v1/', include(route.urls)),
-
+    path('local/<int:pk>/', LocalAPIViewSet.as_view),
+    path('rota/<int:pk>/', RotaAPIViewSet.as_view)
 ]
-
