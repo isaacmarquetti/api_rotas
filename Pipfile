@@ -9,6 +9,7 @@ gunicorn = "*"
 djangorestframework = "*"
 markdown = "*"
 django-filter = "*"
+python-decouple = "*"
 
 [dev-packages]
 pytest-django = "*"
