@@ -10,6 +10,10 @@ djangorestframework = "*"
 markdown = "*"
 django-filter = "*"
 python-decouple = "*"
+dj-database-url = "*"
+django-s3-folder-storage = "*"
+psycopg2-binary = "*"
+requests = "*"
 
 [dev-packages]
 pytest-django = "*"
