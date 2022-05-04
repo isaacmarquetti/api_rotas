@@ -1,5 +1,6 @@
 from django.test import Client
 import requests
+from rest_framework.permissions import IsAuthenticated
 
 
 def test_home_status_code(client: Client):
@@ -11,7 +12,7 @@ def test_home_status_code(client: Client):
 
 
 class TestLocal:
-    url_base_local = 'http://127.0.0.1:8000/api/v1/local/'
+    url_base_local = 'https://apirotas.herokuapp.com/api/v1/local/'
 
     def test_get_locais(self):
         """
@@ -44,7 +45,7 @@ class TestLocal:
 
 
 class TestRota:
-    url_base_local = 'http://127.0.0.1:8000/api/v1/rota/'
+    url_base_local = 'https://apirotas.herokuapp.com/api/v1/rota/'
 
     def test_get_rotas(self):
         """
