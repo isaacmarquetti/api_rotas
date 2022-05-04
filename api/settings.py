@@ -171,6 +171,16 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication',
     ),
     'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAuthenticatedOrReadOnly',
-    )
+        # Configurando para 'AllowAny' para fins de acesso por todos usuários
+        'rest_framework.permissions.AllowAny',
+    ),
+    'DEFAULT_THROTTLE_CLASSES': (
+        'rest_framework.throttling.AnonRateThrottle',
+        'rest_framework.throttling.UserRateThrottle',
+    ),
+    'DEFAULT_THROTTLE_RATES': {
+        # Por conta da alta demanda de requisições do cliente
+        'anon': '500/second',
+        'user': '1000/second'
+    }
 }

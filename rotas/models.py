@@ -2,9 +2,6 @@ from django.db import models
 
 
 class Local(models.Model):
-    """
-    Método para atribuir um local como exemplo.
-    """
     local = models.CharField(max_length=30)
 
     def __str__(self):
@@ -16,12 +13,6 @@ class Local(models.Model):
 
 
 class Rota(models.Model):
-    """
-    Método para criar rotas entre os locais criados como exemplo.
-
-    Ao definir um local de origem "source" e um ponto de chegada "target",
-    é atribuido uma distância entre dois pontos em uma rota unidirecional.
-    """
     Town = (
         ('A', 'Exemplo A'),
         ('B', 'Exemplo B'),

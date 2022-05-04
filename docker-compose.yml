@@ -1,0 +1,16 @@
+version: "3.3"
+
+services:
+  database:
+    container_name: apirotas_database
+    image: postgres
+    restart: always
+    volumes:
+      - ./.pgdata:/var/lib/postgresql/data
+    environment:
+      - LC_ALL=C.UTF-8
+      - POSTGRES_PASSWORD=apirotas
+      - POSTGRES_USER=apirotas
+      - POSTGRES_DB=api_rotas
+    ports:
+      - 5434:5432
