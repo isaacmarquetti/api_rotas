@@ -1,6 +1,6 @@
 # Api_rotas
 
-> Status: Em desenvolvimento ⚠️
+> Status: Concluído (versão 1)
 
 ## Aplicação:
 https://apirotas.herokuapp.com/api/v1/
@@ -40,7 +40,7 @@ Ao definir um local de origem "source" e um ponto de chegada "target",
 
 ## Testes
 
-Vários testes na pasta tests.py para assegurar
+Vários testes unitários na pasta tests.py para assegurar
 diversas funcionalidades:
 
 #### - Teste para todos os locais.
@@ -48,6 +48,10 @@ diversas funcionalidades:
 #### - Teste para confirmar 5 locais como exemplo.
 #### - Teste para confirmar local inválido
 #### - Teste para todas as rotas.
+
+## Integração Contínua
+
+Testes de integração com Github Actions e Heroku.
 
 ## Observação Importante
 
